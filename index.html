@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Symon Silva Lima</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --bg-color: #fff;
+            --section-gap: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+            print-color-adjust: exact !important;           /* Firefox */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f0f2f5;
+            padding: 40px 0;
+        }
+
+        /* Container A4 Style */
+        .page {
+            background-color: var(--bg-color);
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 20mm;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1; /* Garante que a página é a base */
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: #555;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info span, 
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10; /* Garante que o link esteja acima de tudo */
+        }
+
+        /* Estilo Links de Contato */
+        .contact-info a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .links {
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: var(--section-gap);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* Skills List */
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 5px;
+        }
+
+        .skills-list strong {
+            color: #444;
+        }
+
+        /* Projects & Experience */
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+
+        .item-date {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        ul.details {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        ul.details li {
+            margin-bottom: 3px;
+        }
+
+        /* Repository Links */
+        .repo-link {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .repo-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Controles de Impressão na Tela */
+        .print-controls {
+            text-align: center;
+            margin-bottom: 20px;
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 210mm;
+            margin: 20px auto;
+        }
+
+        .print-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .print-btn:hover {
+            background-color: #2471a3;
+        }
+
+        /* --- CONFIGURAÇÃO CRÍTICA PARA IMPRESSÃO --- */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                padding: 0; 
+                border: none;
+            }
+            .print-controls {
+                display: none; /* Esconde os botões e avisos no PDF final */
+            }
+            
+            /* Força os links a serem processados como links */
+            a {
+                text-decoration: none !important;
+                color: var(--accent-color) !important;
+            }
+            
+            /* Garante que links de contato mantenham a cor legível */
+            .contact-info a {
+                color: #333 !important;
+            }
+            
+            h2 {
+                border-bottom: 1px solid #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <header>
+            <h1>Symon Silva Lima</h1>
+            <div class="subtitle">Estagiário de Desenvolvimento</div>
+            
+            <div class="contact-info">
+                <span>Contagem, MG</span> |
+                <span>24/11/1997</span> |
+                <span>Solteiro</span>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:symon.silva.lima@hotmail.com" target="_blank">📧 symon.silva.lima@hotmail.com</a> |
+                <a href="https://wa.me/5531991214533" target="_blank">📱 (31) 9 9121-4533</a>
+            </div>
+
+            <div class="links">
+                <a href="https://www.linkedin.com/in/symonsilvalima" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/SymonSL7" target="_blank">GitHub</a> |
+                <a href="https://symonsl7.github.io/Portfolio/" target="_blank">Portfólio Digital</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Objetivo Profissional</h2>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas (PUC MINAS) e Técnico em Desenvolvimento de Sistemas (Formado – Senai Fatec BH - 2019), com experiência consolidada em Suporte de TI.</p>
+            <p>Atualmente em transição de carreira, com foco em desenvolvimento C#, .NET e SQL, conforme demonstrado em bootcamps recentes. Busco uma oportunidade de estágio para aplicar meus conhecimentos técnicos e contribuir em projetos práticos.</p>
+        </section>
+
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <ul class="skills-list">
+                <li><strong>Back-End:</strong> C#, .NET Framework, PHP.</li>
+                <li><strong>Front-End:</strong> HTML, CSS, JavaScript, TypeScript.</li>
+                <li><strong>Banco de Dados:</strong> SQL.</li>
+                <li><strong>Ferramentas e Outros:</strong> Versionamento com Git & GitHub, Windows Server, Pacote Office.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projetos (Acadêmicos e de Estudos)</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Saber+ (Projeto Acadêmico - PUC MINAS 2º Período)</span>
+                </div>
+                <p>Desenvolvimento de uma aplicação web para gestão de cursos online, focada em facilitar o relacionamento entre alunos, instrutores e conteúdo.</p>
+                <div class="tech-stack"><strong>Tecnologias:</strong> ASP.NET Core MVC.</div>
+                <a href="https://github.com/SymonSL7/SaberMais" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/SaberMais</a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Controle de Estoque Full-Stack (Aplicação Real)</span>
+                </div>
+                <p>Desenvolvimento de uma aplicação Web para controle de estoque, com o objetivo de otimizar a gestão do meu Ecommerce.</p>
+                <div class="tech-stack"><strong>Tecnologias:</strong> Angular (Front-end), PHP e Symfony (Back-end).</div>
+                <a href="https://github.com/SymonSL7/controle-estoque-full-stack" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/controle-estoque-full-stack</a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Vestindo Esperança (Projeto Acadêmico - PUC MINAS 1º Período)</span>
+                </div>
+                <p>Desenvolvimento do front-end de uma aplicação Web, como projeto do 1º período do curso de Análise e Desenvolvimento de Sistemas (PUC MINAS).</p>
+                <div class="tech-stack"><strong>Tecnologias:</strong> HTML, CSS e JavaScript.</div>
+                <a href="https://github.com/SymonSL7/VestindoEsperancaPucMinas1Periodo" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/VestindoEsperancaPucMinas1Periodo</a>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Portfólio Profissional Dinâmico</span>
+                </div>
+                <p>Desenvolvimento de um portfólio profissional onde as informações são carregadas dinamicamente a partir de um arquivo JSON.</p>
+                <div class="tech-stack"><strong>Tecnologias:</strong> HTML, CSS e JavaScript (Fetch API).</div>
+                <a href="https://github.com/SymonSL7/Portfolio" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/Portfolio</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formação Acadêmica</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Análise e Desenvolvimento de Sistemas – PUC MINAS</span>
+                    <span class="item-date">Início: 10/02/2025</span>
+                </div>
+                <span class="item-subtitle">Cursando 3º Período</span>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Técnico Desenvolvimento de Sistemas – Senai Fatec BH</span>
+                    <span class="item-date">01/08/2017 a 18/02/2019</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cursos e Formações Complementares</h2>
+            <ul class="skills-list">
+                <li>Bootcamp Blip Lógica de Programação - DIO - 01/2026</li>
+                <li>GFT Start #7 .NET – DIO – 08/2025</li>
+                <li>Formação PHP Experience – DIO – 07/2025</li>
+                <li>Formação TypeScript Fullstack Developer – DIO – 05/2025</li>
+                <li>Formação JavaScript Developer – DIO – 05/2025</li>
+                <li>BOOTCAMP - Avanade - Decola Tech 2025 Full Stack Angular & Spring Boot – DIO – 03/2025</li>
+                <li>Formação Lógica de Programação – DIO – 03/2025</li>
+                <li>BOOTCAMP - GFT - Desenvolvimento Java com IA - DIO - 11/2024</li>
+                <li>Lógica de Programação com Java Para Iniciantes – AlgaWorks - 11/2024</li>
+                <li>Banco de Dados e SQL Para Iniciantes – AlgaWorks - 07/2024</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Experiências Profissionais</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Capillus E-Commerce Group Lojas Online</span>
+                    <span class="item-date">01/03/2022 – 31/01/2026</span>
+                </div>
+                <span class="item-subtitle">Gestor de Ecommerce (Autônomo)</span>
+                <ul class="details">
+                    <li>Gestão completa de 4 lojas virtuais operando nas plataformas Mercado Livre, Shopee e Magazine Luiza.</li>
+                    <li>Responsável por todo o ciclo de operações: cadastro de produtos, gerenciamento de estoque, processamento de pedidos e atendimento ao cliente.</li>
+                    <li>Responsável pelo desenvolvimento de planilhas e soluções internas para otimização da gestão, utilizando fórmulas avançadas e programação.</li>
+                    <li>Paralelamente, dedicado à requalificação profissional para a área de Desenvolvimento de Software.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">ATMC CONSULTORIA E ENGENHARIA</span>
+                    <span class="item-date">22/07/2019 a 25/02/2022</span>
+                </div>
+                <span class="item-subtitle">Técnico em Suporte de TI</span>
+                <ul class="details">
+                    <li>Gestão de Active Directory, Windows Server, Backup e Firewall.</li>
+                    <li>Suporte ao Usuário (Remoto e Presencial) e resolução de problemas de software e hardware.</li>
+                    <li>Manutenção de Infraestrutura de Redes e Inventário de equipamentos.</li>
+                    <li>Auxiliar de Projetos de Engenharia de Automação (Desenvolvimento de Supervisórios).</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">FC INFORMÁTICA</span>
+                    <span class="item-date">04/01/2019 a 19/07/2019</span>
+                </div>
+                <span class="item-subtitle">Técnico em Suporte de TI</span>
+                <ul class="details">
+                    <li>Suporte ao Cliente (Remoto e Presencial) e gestão de AD, Windows Server e Backup.</li>
+                    <li>Instalação e Resolução de Problemas (Windows, Softwares, Hardwares).</li>
+                    <li>Suporte a Sites Jurídicos e Configuração de Token.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">ATMC CONSULTORIA E ENGENHARIA</span>
+                    <span class="item-date">23/04/2018 a 03/01/2019</span>
+                </div>
+                <span class="item-subtitle">Estagiário de Suporte de TI</span>
+                <ul class="details">
+                    <li>Gestão de Active Directory, Windows Server, Backup e Firewall.</li>
+                    <li>Suporte ao Usuário (Remoto e Presencial) e resolução de problemas de software e hardware.</li>
+                    <li>Manutenção de Infraestrutura de Redes e Inventário de equipamentos.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div class="print-controls">
+        <strong>⚠️ IMPORTANTE:</strong><br>
+        Na janela de impressão, em "Destino", selecione <strong>"Salvar como PDF"</strong> (ou "Save as PDF").<br>
+        <em>Não use "Microsoft Print to PDF", pois ele desativa os links.</em><br><br>
+        <button class="print-btn" onclick="window.print()">🖨️ Gerar PDF Agora</button>
+    </div>
+
+</body>
+</html>
