@@ -13,6 +13,8 @@
 
 <p>Uma aplicação desenvolvida para modernizar a apresentação do meu perfil profissiol. Diferente dos formatos estáticos convencionais, este currículo web prioriza o design moderno, a legibilidade e a interatividade, garantindo que as informações se adaptem perfeitamente a diferentes resoluções de tela. </p>
 
+<h2>Veja no <a href="https://symonsl7.github.io/CurriculoWeb/" target="_blank">GitHub Pages</a></h2>
+
 </p>
 
 ###
