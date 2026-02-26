@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +18,10 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
-            print-color-adjust: exact !important;           /* Firefox */
+            -webkit-print-color-adjust: exact !important;
+            /* Chrome, Safari */
+            print-color-adjust: exact !important;
+            /* Firefox */
         }
 
         body {
@@ -36,9 +39,10 @@
             min-height: 297mm;
             margin: 0 auto;
             padding: 20mm;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             position: relative;
-            z-index: 1; /* Garante que a página é a base */
+            z-index: 1;
+            /* Garante que a página é a base */
         }
 
         /* Header */
@@ -74,12 +78,13 @@
             margin-bottom: 10px;
         }
 
-        .contact-info span, 
+        .contact-info span,
         .contact-info a {
             display: flex;
             align-items: center;
             position: relative;
-            z-index: 10; /* Garante que o link esteja acima de tudo */
+            z-index: 10;
+            /* Garante que o link esteja acima de tudo */
         }
 
         /* Estilo Links de Contato */
@@ -202,7 +207,7 @@
             position: relative;
             z-index: 10;
         }
-        
+
         .repo-link:hover {
             text-decoration: underline;
         }
@@ -242,44 +247,48 @@
                 background-color: white;
                 padding: 0;
             }
+
             .page {
                 box-shadow: none;
                 margin: 0;
                 width: 100%;
-                padding: 0; 
+                padding: 0;
                 border: none;
             }
+
             .print-controls {
-                display: none; /* Esconde os botões e avisos no PDF final */
+                display: none;
+                /* Esconde os botões e avisos no PDF final */
             }
-            
+
             /* Força os links a serem processados como links */
             a {
                 text-decoration: none !important;
                 color: var(--accent-color) !important;
             }
-            
+
             /* Garante que links de contato mantenham a cor legível */
             .contact-info a {
                 color: #333 !important;
             }
-            
+
             h2 {
                 border-bottom: 1px solid #000;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="page">
         <header>
             <h1>Symon Silva Lima</h1>
             <div class="subtitle">Estagiário de Desenvolvimento</div>
-            
+
             <div class="contact-info">
                 <span>Contagem, MG</span> |
-                <span>24/11/1997</span> |
+                <span id="idade-calculada"></span> |
                 <span>Solteiro</span>
             </div>
             <div class="contact-info">
@@ -296,8 +305,11 @@
 
         <section>
             <h2>Objetivo Profissional</h2>
-            <p>Estudante de Análise e Desenvolvimento de Sistemas (PUC MINAS) e Técnico em Desenvolvimento de Sistemas (Formado – Senai Fatec BH - 2019), com experiência consolidada em Suporte de TI.</p>
-            <p>Atualmente em transição de carreira, com foco em desenvolvimento C#, .NET e SQL, conforme demonstrado em bootcamps recentes. Busco uma oportunidade de estágio para aplicar meus conhecimentos técnicos e contribuir em projetos práticos.</p>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas (PUC MINAS) e Técnico em Desenvolvimento de Sistemas
+                (Formado – Senai Fatec BH - 2019), com experiência consolidada em Suporte de TI.</p>
+            <p>Atualmente em transição de carreira, com foco em desenvolvimento C#, .NET e SQL, conforme demonstrado em
+                cursos recentes. Busco uma oportunidade de estágio para aplicar meus conhecimentos técnicos e
+                contribuir em projetos práticos.</p>
         </section>
 
         <section>
@@ -306,47 +318,57 @@
                 <li><strong>Back-End:</strong> C#, .NET Framework, PHP.</li>
                 <li><strong>Front-End:</strong> HTML, CSS, JavaScript, TypeScript.</li>
                 <li><strong>Banco de Dados:</strong> SQL.</li>
-                <li><strong>Ferramentas e Outros:</strong> Versionamento com Git & GitHub, Windows Server, Pacote Office.</li>
+                <li><strong>Ferramentas e Outros:</strong> Versionamento com Git & GitHub, Windows Server, Pacote
+                    Office.</li>
             </ul>
         </section>
 
         <section>
             <h2>Projetos (Acadêmicos e de Estudos)</h2>
-            
+
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Saber+ (Projeto Acadêmico - PUC MINAS 2º Período)</span>
                 </div>
-                <p>Desenvolvimento de uma aplicação web para gestão de cursos online, focada em facilitar o relacionamento entre alunos, instrutores e conteúdo.</p>
+                <p>Desenvolvimento de uma aplicação web para gestão de cursos online, focada em facilitar o
+                    relacionamento entre alunos, instrutores e conteúdo.</p>
                 <div class="tech-stack"><strong>Tecnologias:</strong> ASP.NET Core MVC.</div>
-                <a href="https://github.com/SymonSL7/SaberMais" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/SaberMais</a>
+                <a href="https://github.com/SymonSL7/SaberMais" class="repo-link" target="_blank">🔗 Repositório:
+                    SymonSL7/SaberMais</a>
             </div>
 
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Controle de Estoque Full-Stack (Aplicação Real)</span>
                 </div>
-                <p>Desenvolvimento de uma aplicação Web para controle de estoque, com o objetivo de otimizar a gestão do meu Ecommerce.</p>
-                <div class="tech-stack"><strong>Tecnologias:</strong> Angular (Front-end), PHP e Symfony (Back-end).</div>
-                <a href="https://github.com/SymonSL7/controle-estoque-full-stack" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/controle-estoque-full-stack</a>
+                <p>Desenvolvimento de uma aplicação Web para controle de estoque, com o objetivo de otimizar a gestão do
+                    meu Ecommerce.</p>
+                <div class="tech-stack"><strong>Tecnologias:</strong> Angular (Front-end), PHP e Symfony (Back-end).
+                </div>
+                <a href="https://github.com/SymonSL7/controle-estoque-full-stack" class="repo-link" target="_blank">🔗
+                    Repositório: SymonSL7/controle-estoque-full-stack</a>
             </div>
 
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Vestindo Esperança (Projeto Acadêmico - PUC MINAS 1º Período)</span>
                 </div>
-                <p>Desenvolvimento do front-end de uma aplicação Web, como projeto do 1º período do curso de Análise e Desenvolvimento de Sistemas (PUC MINAS).</p>
+                <p>Desenvolvimento do front-end de uma aplicação Web, como projeto do 1º período do curso de Análise e
+                    Desenvolvimento de Sistemas (PUC MINAS).</p>
                 <div class="tech-stack"><strong>Tecnologias:</strong> HTML, CSS e JavaScript.</div>
-                <a href="https://github.com/SymonSL7/VestindoEsperancaPucMinas1Periodo" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/VestindoEsperancaPucMinas1Periodo</a>
+                <a href="https://github.com/SymonSL7/VestindoEsperancaPucMinas1Periodo" class="repo-link"
+                    target="_blank">🔗 Repositório: SymonSL7/VestindoEsperancaPucMinas1Periodo</a>
             </div>
 
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Portfólio Profissional Dinâmico</span>
                 </div>
-                <p>Desenvolvimento de um portfólio profissional onde as informações são carregadas dinamicamente a partir de um arquivo JSON.</p>
+                <p>Desenvolvimento de um portfólio profissional onde as informações são carregadas dinamicamente a
+                    partir de um arquivo JSON.</p>
                 <div class="tech-stack"><strong>Tecnologias:</strong> HTML, CSS e JavaScript (Fetch API).</div>
-                <a href="https://github.com/SymonSL7/Portfolio" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/Portfolio</a>
+                <a href="https://github.com/SymonSL7/Portfolio" class="repo-link" target="_blank">🔗 Repositório:
+                    SymonSL7/Portfolio</a>
             </div>
         </section>
 
@@ -370,24 +392,24 @@
         <section>
             <h2>Cursos e Formações Complementares</h2>
             <ul class="skills-list">
-                <li>Formação CSS Web Developer - DIO - 02/2026</li>
-                <li>Formação HTML Web Developer - DIO - 02/2026</li>
-                <li>Bootcamp Blip Lógica de Programação - DIO - 01/2026</li>
-                <li>GFT Start #7 .NET – DIO – 08/2025</li>
-                <li>Formação PHP Experience – DIO – 07/2025</li>
-                <li>Formação TypeScript Fullstack Developer – DIO – 05/2025</li>
-                <li>Formação JavaScript Developer – DIO – 05/2025</li>
-                <li>BOOTCAMP - Avanade - Decola Tech 2025 Full Stack Angular & Spring Boot – DIO – 03/2025</li>
-                <li>Formação Lógica de Programação – DIO – 03/2025</li>
-                <li>BOOTCAMP - GFT - Desenvolvimento Java com IA - DIO - 11/2024</li>
-                <li>Lógica de Programação com Java Para Iniciantes – AlgaWorks - 11/2024</li>
-                <li>Banco de Dados e SQL Para Iniciantes – AlgaWorks - 07/2024</li>
+                <li>Formação CSS Web Developer - <strong>DIO</strong> - 02/2026</li>
+                <li>Formação HTML Web Developer - <strong>DIO</strong> - 02/2026</li>
+                <!-- <li>Bootcamp Blip Lógica de Programação - <strong>DIO</strong> - 01/2026</li> -->
+                <li>GFT Start #7 .NET (C#) – <strong>DIO</strong> – 08/2025</li>
+                <!-- <li>Formação PHP Experience – <strong>DIO</strong> – 07/2025</li> -->
+                <li>Formação TypeScript Fullstack Developer – <strong>DIO</strong> – 05/2025</li>
+                <li>Formação JavaScript Developer – <strong>DIO</strong> – 05/2025</li>
+                <!-- <li>BOOTCAMP - Avanade - Decola Tech 2025 Full Stack Angular & Spring Boot – <strong>DIO</strong> – 03/2025</li> -->
+                <li>Formação Lógica de Programação – <strong>DIO</strong> – 03/2025</li>
+                <!-- <li>BOOTCAMP - GFT - Desenvolvimento Java com IA - <strong>DIO</strong> - 11/2024</li> -->
+                <!-- <li>Lógica de Programação com Java Para Iniciantes – <strong> AlgaWorks </strong>- 11/2024</li> -->
+                <li>Banco de Dados e SQL Para Iniciantes – <strong> AlgaWorks </strong>- 07/2024</li>
             </ul>
         </section>
 
         <section>
             <h2>Experiências Profissionais</h2>
-            
+
             <div class="item">
                 <div class="item-header">
                     <span class="item-title">Capillus E-Commerce Group Lojas Online</span>
@@ -395,10 +417,14 @@
                 </div>
                 <span class="item-subtitle">Gestor de Ecommerce (Autônomo)</span>
                 <ul class="details">
-                    <li>Gestão completa de 4 lojas virtuais operando nas plataformas Mercado Livre, Shopee e Magazine Luiza.</li>
-                    <li>Responsável por todo o ciclo de operações: cadastro de produtos, gerenciamento de estoque, processamento de pedidos e atendimento ao cliente.</li>
-                    <li>Responsável pelo desenvolvimento de planilhas e soluções internas para otimização da gestão, utilizando fórmulas avançadas e programação.</li>
-                    <li>Paralelamente, dedicado à requalificação profissional para a área de Desenvolvimento de Software.</li>
+                    <li>Gestão completa de 4 lojas virtuais operando nas plataformas Mercado Livre, Shopee e Magazine
+                        Luiza.</li>
+                    <li>Responsável por todo o ciclo de operações: cadastro de produtos, gerenciamento de estoque,
+                        processamento de pedidos e atendimento ao cliente.</li>
+                    <li>Responsável pelo desenvolvimento de planilhas e soluções internas para otimização da gestão,
+                        utilizando fórmulas avançadas e programação.</li>
+                    <li>Paralelamente, dedicado à requalificação profissional para a área de Desenvolvimento de
+                        Software.</li>
                 </ul>
             </div>
 
@@ -451,5 +477,26 @@
         <button class="print-btn" onclick="window.print()">🖨️ Gerar PDF Agora</button>
     </div>
 
+    <script>
+        (function () {
+            const nascimento = new Date(1997, 10, 24);
+            const hoje = new Date();
+
+            let idade = hoje.getFullYear() - nascimento.getFullYear();
+            const mesAtual = hoje.getMonth();
+            const diaAtual = hoje.getDate();
+            const mesNasc = nascimento.getMonth();
+            const diaNasc = nascimento.getDate();
+
+            if (mesAtual < mesNasc || (mesAtual === mesNasc && diaAtual < diaNasc)) {
+                idade--;
+            }
+
+            
+            document.getElementById("idade-calculada").innerText = idade + " anos";
+        })();
+    </script>
+
 </body>
+
 </html>
