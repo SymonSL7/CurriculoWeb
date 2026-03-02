@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Symon Silva Lima - Analista de TI</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --bg-color: #fff;
+            --section-gap: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f0f2f5;
+            padding: 40px 0;
+        }
+
+        .page {
+            background-color: var(--bg-color);
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 20mm;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            color: #555;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info span,
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-info a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .links {
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: var(--section-gap);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 5px;
+        }
+
+        .skills-list strong {
+            color: #444;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+
+        .item-date {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        ul.details {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        ul.details li {
+            margin-bottom: 3px;
+        }
+
+        .repo-link {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 10;
+        }
+
+        .repo-link:hover {
+            text-decoration: underline;
+        }
+
+        .print-controls {
+            text-align: center;
+            margin-bottom: 20px;
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 210mm;
+            margin: 20px auto;
+        }
+
+        .print-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .print-btn:hover {
+            background-color: #2471a3;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+                border: none;
+            }
+
+            .print-controls {
+                display: none;
+            }
+
+            a {
+                text-decoration: none !important;
+                color: var(--accent-color) !important;
+            }
+
+            .contact-info a {
+                color: #333 !important;
+            }
+
+            h2 {
+                border-bottom: 1px solid #000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <header>
+            <h1>Symon Silva Lima</h1>
+            <div class="subtitle">Analista de TI</div>
+
+            <div class="contact-info">
+                <span>Contagem, MG</span> |
+                <span id="idade-calculada"></span> |
+                <span>Solteiro</span>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:symon.silva.lima@hotmail.com" target="_blank">📧 symon.silva.lima@hotmail.com</a> |
+                <a href="https://wa.me/5531991214533" target="_blank">📱 (31) 9 9121-4533</a>
+            </div>
+
+            <div class="links">
+                <a href="https://www.linkedin.com/in/symonsilvalima" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/SymonSL7" target="_blank">GitHub</a> |
+                <a href="https://symonsl7.github.io/Portfolio/" target="_blank">Portfólio Digital</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Objetivo Profissional</h2>
+            <p>Profissional de TI com 4 anos de experiência sólida em suporte técnico presencial e remoto, administração de servidores (Windows Server, Active Directory), redes e manutenção de infraestrutura de hardware. Graduando em Análise e Desenvolvimento de Sistemas (PUC MINAS) e Técnico em TI pelo Senai.</p>
+            <p>Possuo perfil proativo, forte capacidade de resolução de problemas. Busco a oportunidade de Analista de TI para aplicar minha expertise técnica, oferecendo suporte de excelência aos colaboradores e apoiando a implementação de melhorias tecnológicas no setor.</p>
+        </section>
+
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <ul class="skills-list">
+                <li><strong>Suporte e Infraestrutura:</strong> Manutenção e formatação de computadores, suporte a impressoras, cabeamento e configuração de redes internas, monitoramento de chamados técnicos.</li>
+                <li><strong>Administração de Sistemas:</strong> Gestão de Active Directory (AD), Windows Server, Rotinas de Backup, Firewall, controle de acessos corporativos e permissões de e-mail.</li>
+                <li><strong>Sistemas Corporativos:</strong> Apoio em demandas sistêmicas e resolução de problemas lógicos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Experiências Profissionais</h2>
+
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Capillus E-Commerce Group Lojas Online</span>
+                    <span class="item-date">01/03/2022 – 31/01/2026</span>
+                </div>
+                <span class="item-subtitle">Gestor de E-commerce e Operações</span>
+                <ul class="details">
+                    <li>Gestão operacional utilizando sistemas de integração e gestão (semelhantes a ERPs) nas plataformas Mercado Livre, Shopee e Magazine Luiza.</li>
+                    <li>Controle sistêmico de estoque, processamento contínuo de pedidos e monitoramento de fluxos operacionais.</li>
+                    <li>Criação de painéis, planilhas avançadas e automações internas para apoiar os processos de gestão corporativa.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">ATMC CONSULTORIA E ENGENHARIA</span>
+                    <span class="item-date">22/07/2019 a 25/02/2022</span>
+                </div>
+                <span class="item-subtitle">Técnico em Suporte de TI</span>
+                <ul class="details">
+                    <li>Prevenção, manutenção e suporte técnico a colaboradores (presencial e remoto) na resolução de problemas de hardware e software.</li>
+                    <li>Administração básica de servidores: Gestão de Active Directory, Windows Server, rotinas de Backup e Firewall.</li>
+                    <li>Manutenção de Infraestrutura de Redes internas e controle de inventário de equipamentos.</li>
+                    <li>Apoio técnico em projetos de Engenharia de Automação, incluindo auxílio no desenvolvimento de sistemas supervisórios.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">FC INFORMÁTICA</span>
+                    <span class="item-date">04/01/2019 a 19/07/2019</span>
+                </div>
+                <span class="item-subtitle">Técnico em Suporte de TI</span>
+                <ul class="details">
+                    <li>Atendimento e suporte técnico em campo (presencial) e remoto a diferentes clientes corporativos.</li>
+                    <li>Manutenção e formatação de máquinas, instalação de softwares e configuração de redes e impressoras.</li>
+                    <li>Administração de acessos (AD), Windows Server e execução de backups sistêmicos.</li>
+                    <li>Suporte a sistemas específicos, sites jurídicos e configuração de Tokens de segurança.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">ATMC CONSULTORIA E ENGENHARIA</span>
+                    <span class="item-date">23/04/2018 a 03/01/2019</span>
+                </div>
+                <span class="item-subtitle">Estagiário de Suporte de TI</span>
+                <ul class="details">
+                    <li>Apoio no atendimento de chamados técnicos de primeiro nível (software e hardware).</li>
+                    <li>Auxílio na gestão do Active Directory e permissões de usuários corporativos.</li>
+                    <li>Acompanhamento na manutenção da infraestrutura de rede da empresa.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formação Acadêmica</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Análise e Desenvolvimento de Sistemas – PUC MINAS</span>
+                    <span class="item-date">Início: 10/02/2025</span>
+                </div>
+                <span class="item-subtitle">Cursando 3º Período</span>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Técnico Desenvolvimento de Sistemas – Senai Fatec BH</span>
+                    <span class="item-date">01/08/2017 a 18/02/2019</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cursos e Conhecimentos Complementares</h2>
+            <ul class="skills-list">
+                <li>Banco de Dados e SQL Para Iniciantes – <strong> AlgaWorks </strong>- 07/2024</li>
+                <li>Formação Lógica de Programação – <strong>DIO</strong> – 03/2025</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <div class="print-controls">
+        <strong>⚠️ IMPORTANTE:</strong><br>
+        Na janela de impressão, em "Destino", selecione <strong>"Salvar como PDF"</strong> (ou "Save as PDF").<br>
+        <em>Não use "Microsoft Print to PDF", pois ele desativa os links.</em><br><br>
+        <button class="print-btn" onclick="window.print()">🖨️ Gerar PDF Agora</button>
+    </div>
+
+    <script>
+        (function () {
+            const nascimento = new Date(1997, 10, 24);
+            const hoje = new Date();
+
+            let idade = hoje.getFullYear() - nascimento.getFullYear();
+            const mesAtual = hoje.getMonth();
+            const diaAtual = hoje.getDate();
+            const mesNasc = nascimento.getMonth();
+            const diaNasc = nascimento.getDate();
+
+            if (mesAtual < mesNasc || (mesAtual === mesNasc && diaAtual < diaNasc)) {
+                idade--;
+            }
+
+            document.getElementById("idade-calculada").innerText = idade + " anos";
+        })();
+    </script>
+
+</body>
+
+</html>
