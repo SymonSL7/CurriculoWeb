@@ -11,7 +11,7 @@
             --accent-color: #2980b9;
             --text-color: #333;
             --bg-color: #fff;
-            --section-gap: 12px;
+            --section-gap: 10px;
         }
 
         * {
@@ -29,10 +29,10 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.35;
+            line-height: 1.3;
             color: var(--text-color);
             background-color: #f0f2f5;
-            font-size: 10.8px;
+            font-size: 10.5px;
         }
 
         .page {
@@ -40,7 +40,7 @@
             width: 210mm;
             height: 297mm;
             margin: 10px auto;
-            padding: 12mm 15mm;
+            padding: 10mm 15mm;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             position: relative;
             z-index: 1;
@@ -98,7 +98,7 @@
             margin: 0 8px;
         }
 
-        
+
         .content-wrapper {
             display: flex;
             gap: 15mm;
@@ -141,7 +141,7 @@
         }
 
         .item {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .item-header {
@@ -221,12 +221,32 @@
         }
 
         @media print {
-            body { background-color: white; }
-            .page { box-shadow: none; margin: 0; border: none; }
-            .print-controls { display: none; }
-            a { text-decoration: none !important; color: var(--accent-color) !important; }
-            .contact-info a { color: #333 !important; }
-            h2 { border-bottom: 1px solid #000; }
+            body {
+                background-color: white;
+            }
+
+            .page {
+                box-shadow: none;
+                margin: 0;
+                border: none;
+            }
+
+            .print-controls {
+                display: none;
+            }
+
+            a {
+                text-decoration: none !important;
+                color: var(--accent-color) !important;
+            }
+
+            .contact-info a {
+                color: #333 !important;
+            }
+
+            h2 {
+                border-bottom: 1px solid #000;
+            }
         }
     </style>
 </head>
@@ -260,17 +280,21 @@
             <div class="column-left">
                 <section>
                     <h2>Objetivo Profissional</h2>
-                    <p>Estudante de Análise e Desenvolvimento de Sistemas (PUC MINAS) e Técnico em Desenvolvimento de Sistemas (Formado – Senai Fatec BH - 2019), com experiência consolidada em Suporte de TI.</p>
-                    <p>Atualmente em transição de carreira, com foco em desenvolvimento C#, .NET e SQL, conforme demonstrado em cursos recentes. Busco uma oportunidade de estágio para aplicar meus conhecimentos técnicos e contribuir em projetos práticos.</p>
+                    <p>Estudante de Análise e Desenvolvimento de Sistemas (PUC MINAS - 3º Período) e Técnico em
+                        Desenvolvimento de Sistemas. Possuo background em Suporte de TI, o que me trouxe forte
+                        habilidade em resolução de problemas e visão sistêmica.</p>
+                    <p>Busco uma oportunidade de estágio em desenvolvimento de software. Tenho me aprofundado na criação
+                        de projetos reais e acadêmicos envolvendo tanto o Back-End (C#, .NET) quanto o
+                        Front-End/Mobile (React Native, JavaScript, TypeScript).</p>
                 </section>
 
                 <section>
                     <h2>Habilidades Técnicas</h2>
                     <ul class="skills-list">
                         <li><strong>Back-End:</strong> C#, .NET Framework.</li>
-                        <li><strong>Front-End:</strong> HTML, CSS, JavaScript, TypeScript.</li>
-                        <li><strong>Banco de Dados:</strong> SQL.</li>
-                        <li><strong>Ferramentas e Outros:</strong> Versionamento com Git & GitHub, Windows Server, Pacote Office.</li>
+                        <li><strong>Front-End:</strong> HTML, CSS, JavaScript, TypeScript, React Native.</li>
+                        <li><strong>Ferramentas e Outros:</strong> Versionamento com Git & GitHub, Windows Server,
+                            Pacote Office.</li>
                     </ul>
                 </section>
 
@@ -279,38 +303,48 @@
 
                     <div class="item">
                         <div class="item-header">
+                            <span class="item-title">ShopSmart (Projeto Acadêmico - PUC MINAS 3º Período)</span>
+                        </div>
+                        <p>Desenvolvimento do Front-End Mobile de um aplicativo para colaboração e comparação de preços
+                            em supermercados locais.</p>
+                        <div class="tech-stack"><strong>Tecnologias:</strong> React Native, Expo e JavaScript.</div>
+                        <a href="https://github.com/SymonProjetos/ShopSmart" class="repo-link" target="_blank">🔗
+                            Repositório: SymonProjetos/ShopSmart</a>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">
                             <span class="item-title">Saber+ (Projeto Acadêmico - PUC MINAS 2º Período)</span>
                         </div>
-                        <p>Desenvolvimento de uma aplicação web para gestão de cursos online, focada em facilitar o relacionamento entre alunos, instrutores e conteúdo.</p>
+                        <p>Desenvolvimento de uma aplicação web para gestão de cursos online, focada em facilitar o
+                            relacionamento entre alunos, instrutores e conteúdo.</p>
                         <div class="tech-stack"><strong>Tecnologias:</strong> ASP.NET Core MVC.</div>
-                        <a href="https://github.com/SymonSL7/SaberMais" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/SaberMais</a>
+                        <a href="https://github.com/SymonSL7/SaberMais" class="repo-link" target="_blank">🔗
+                            Repositório: SymonSL7/SaberMais</a>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
                             <span class="item-title">Controle de Estoque Full-Stack (Aplicação Real)</span>
                         </div>
-                        <p>Desenvolvimento de uma aplicação Web para controle de estoque, com o objetivo de otimizar a gestão do meu Ecommerce.</p>
-                        <div class="tech-stack"><strong>Tecnologias:</strong> Angular (Front-end), PHP e Symfony (Back-end).</div>
-                        <a href="https://github.com/SymonSL7/controle-estoque-full-stack" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/controle-estoque-full-stack</a>
+                        <p>Desenvolvimento de uma aplicação Web para controle de estoque, com o objetivo de otimizar a
+                            gestão do meu Ecommerce.</p>
+                        <div class="tech-stack"><strong>Tecnologias:</strong> Angular (Front-end), PHP e Symfony
+                            (Back-end).</div>
+                        <a href="https://github.com/SymonSL7/controle-estoque-full-stack" class="repo-link"
+                            target="_blank">🔗 Repositório: SymonSL7/controle-estoque-full-stack</a>
                     </div>
 
                     <div class="item">
                         <div class="item-header">
-                            <span class="item-title">Vestindo Esperança (Projeto Acadêmico - PUC MINAS 1º Período)</span>
+                            <span class="item-title">Vestindo Esperança (Projeto Acadêmico - PUC MINAS 1º
+                                Período)</span>
                         </div>
-                        <p>Desenvolvimento do front-end de uma aplicação Web, como projeto do 1º período do curso de Análise e Desenvolvimento de Sistemas (PUC MINAS).</p>
+                        <p>Desenvolvimento do front-end de uma aplicação Web, como projeto do 1º período do curso de
+                            Análise e Desenvolvimento de Sistemas (PUC MINAS).</p>
                         <div class="tech-stack"><strong>Tecnologias:</strong> HTML, CSS e JavaScript.</div>
-                        <a href="https://github.com/SymonSL7/VestindoEsperancaPucMinas1Periodo" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/VestindoEsperancaPucMinas1Periodo</a>
-                    </div>
-
-                    <div class="item">
-                        <div class="item-header">
-                            <span class="item-title">Portfólio Profissional Dinâmico</span>
-                        </div>
-                        <p>Desenvolvimento de um portfólio profissional onde as informações são carregadas dinamicamente a partir de um arquivo JSON.</p>
-                        <div class="tech-stack"><strong>Tecnologias:</strong> HTML, CSS e JavaScript (Fetch API).</div>
-                        <a href="https://github.com/SymonSL7/Portfolio" class="repo-link" target="_blank">🔗 Repositório: SymonSL7/Portfolio</a>
+                        <a href="https://github.com/SymonSL7/VestindoEsperancaPucMinas1Periodo" class="repo-link"
+                            target="_blank">🔗 Repositório: SymonSL7/VestindoEsperancaPucMinas1Periodo</a>
                     </div>
                 </section>
             </div>
@@ -335,7 +369,7 @@
 
                 <section>
                     <h2>Experiências Profissionais</h2>
-                    
+
                     <div class="item">
                         <div class="item-header">
                             <span class="item-title">Capillus E-Commerce Group Lojas Online</span>
@@ -343,10 +377,14 @@
                         </div>
                         <span class="item-subtitle">Gestor de Ecommerce (Autônomo)</span>
                         <ul class="details">
-                            <li>Gestão completa de 4 lojas virtuais operando nas plataformas Mercado Livre, Shopee e Magazine Luiza.</li>
-                            <li>Responsável por todo o ciclo de operações: cadastro de produtos, gerenciamento de estoque, processamento de pedidos e atendimento ao cliente.</li>
-                            <li>Responsável pelo desenvolvimento de planilhas e soluções internas para otimização da gestão, utilizando fórmulas avançadas e programação.</li>
-                            <li>Paralelamente, dedicado à requalificação profissional para a área de Desenvolvimento de Software.</li>
+                            <li>Gestão completa de 4 lojas virtuais operando nas plataformas Mercado Livre, Shopee e
+                                Magazine Luiza.</li>
+                            <li>Responsável por todo o ciclo de operações: cadastro de produtos, gerenciamento de
+                                estoque, processamento de pedidos e atendimento ao cliente.</li>
+                            <li>Responsável pelo desenvolvimento de planilhas e soluções internas para otimização da
+                                gestão, utilizando fórmulas avançadas e programação.</li>
+                            <li>Paralelamente, dedicado à requalificação profissional para a área de Desenvolvimento de
+                                Software.</li>
                         </ul>
                     </div>
 
@@ -358,7 +396,8 @@
                         <span class="item-subtitle">Técnico em Suporte de TI</span>
                         <ul class="details">
                             <li>Gestão de Active Directory, Windows Server, Backup e Firewall.</li>
-                            <li>Suporte ao Usuário (Remoto e Presencial) e resolução de problemas de software e hardware.</li>
+                            <li>Suporte ao Usuário (Remoto e Presencial) e resolução de problemas de software e
+                                hardware.</li>
                             <li>Manutenção de Infraestrutura de Redes e Inventário de equipamentos.</li>
                             <li>Auxiliar de Projetos de Engenharia de Automação (Desenvolvimento de Supervisórios).</li>
                         </ul>
@@ -385,7 +424,8 @@
                         <span class="item-subtitle">Estagiário de Suporte de TI</span>
                         <ul class="details">
                             <li>Gestão de Active Directory, Windows Server, Backup e Firewall.</li>
-                            <li>Suporte ao Usuário (Remoto e Presencial) e resolução de problemas de software e hardware.</li>
+                            <li>Suporte ao Usuário (Remoto e Presencial) e resolução de problemas de software e
+                                hardware.</li>
                             <li>Manutenção de Infraestrutura de Redes e Inventário de equipamentos.</li>
                         </ul>
                     </div>
@@ -394,8 +434,11 @@
                 <section>
                     <h2>Certificações, Cursos e Formações Complementares</h2>
                     <ul class="skills-list">
-                        <li>Qualificação Profissional Tecnológica em Desenvolvedor de Software – <strong>PUC Minas</strong> – 02/2026 
-                            <a href="https://web.sistemas.pucminas.br/GAD/DOC/Verificador/Consulta/DEA374784873FD8E70AA0F3E56866411" target="_blank" style="text-decoration: none; font-size: 0.85em; margin-left: 5px;">🔗 Ver Certificado</a>
+                        <li>Qualificação Profissional Tecnológica em Desenvolvedor de Software – <strong>PUC
+                                Minas</strong> – 02/2026
+                            <a href="https://web.sistemas.pucminas.br/GAD/DOC/Verificador/Consulta/DEA374784873FD8E70AA0F3E56866411"
+                                target="_blank" style="text-decoration: none; font-size: 0.85em; margin-left: 5px;">🔗
+                                Ver Certificado</a>
                         </li>
                         <li>Formação CSS Web Developer - <strong>DIO</strong> - 02/2026</li>
                         <li>Formação HTML Web Developer - <strong>DIO</strong> - 02/2026</li>
@@ -413,7 +456,8 @@
     <div class="print-controls">
         <strong>⚠️ IMPORTANTE:</strong><br>
         Na janela de impressão, em "Destino", selecione <strong>"Salvar como PDF"</strong> (ou "Save as PDF").<br>
-        Certifique-se de que a <strong>Escala (Scale)</strong> está em <strong>Padrão (Default)</strong> e o tamanho do papel seja <strong>A4</strong>.<br><br>
+        Certifique-se de que a <strong>Escala (Scale)</strong> está em <strong>Padrão (Default)</strong> e o tamanho do
+        papel seja <strong>A4</strong>.<br><br>
         <button class="print-btn" onclick="window.print()">🖨️ Gerar PDF Agora</button>
     </div>
 
